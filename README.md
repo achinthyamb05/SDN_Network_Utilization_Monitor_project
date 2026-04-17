@@ -74,6 +74,20 @@ If the network fails to start or says "Address already in use," clean the Minine
 
 - sudo mn -c
 
+## Expected Output
+
+- Connectivity: pingall results in 0% packet loss, confirming successful SDN flow rule installation.
+
+- Monitoring: The Ryu terminal displays live Utilization Reports every 5 seconds, showing Switch ID, Port, and Throughput (Kbps).
+
+- Traffic Spikes: Running iperf triggers a visible increase in the Kbps values in the controller logs.
+
+- Flow Tables: Using ovs-ofctl dump-flows displays active OpenFlow rules with increasing packet and byte counts.
+
+- Wireshark: Captures show valid OpenFlow 1.3 handshake and statistics request/reply packets.
+
+
+
 
 
   
