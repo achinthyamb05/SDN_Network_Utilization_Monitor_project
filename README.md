@@ -86,6 +86,36 @@ If the network fails to start or says "Address already in use," clean the Minine
 
 - Wireshark: Captures show valid OpenFlow 1.3 handshake and statistics request/reply packets.
 
+## Screenshots
+
+1) Real-time Port Utilization Monitoring
+
+Low Traffic: The initial reports show idle background traffic (~1 Kbps).
+
+
+Traffic Spike: The middle reports show a significant increase (reaching over 100,000 Kbps), representing an active iperf test between hosts
+
+   
+<img width="1232" height="974" alt="image" src="https://github.com/user-attachments/assets/b9840d08-6701-41ca-9565-8f2e930d5ea6" />
+
+
+2) Pingall and iperf results
+
+
+<img width="967" height="603" alt="image" src="https://github.com/user-attachments/assets/3ff9a270-9bc8-4d7c-a2fd-e765936f3ba7" />
+
+3) Flow Table
+
+All incoming traffic is currently being forwarded to the controller (actions=CONTROLLER), allowing the Ryu script to monitor and process the packets for utilization reporting.
+
+<img width="1629" height="201" alt="image" src="https://github.com/user-attachments/assets/a4b05c10-c379-4e49-ad5d-8aba7266dcc7" />
+
+4) Wireshark
+
+<img width="1026" height="821" alt="image" src="https://github.com/user-attachments/assets/e6b8e33c-4021-4c0c-a55f-d50823242eca" />
+
+
+
 
 
 
